@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#091326">
+  <meta name="description" content="SHAURYAM — Study, discipline, fitness and daily progress. Created by Yogesh.">
+  <title>SHAURYAM | Created by YOGESH</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="navy">
+
+  <div id="splash" class="splash">
+    <div class="splash-particles" id="particles"></div>
+    <div class="splash-brand">
+      <div class="lotus-wrap">
+        <svg class="lotus-logo" viewBox="0 0 120 100"
+             xmlns="http://www.w3.org/2000/svg" role="img"
+             aria-label="Golden lotus logo">
+          <defs>
+            <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#fff1ac"/>
+              <stop offset="45%" stop-color="#e8bd56"/>
+              <stop offset="100%" stop-color="#9e6c19"/>
+            </linearGradient>
+          </defs>
+          <g fill="url(#gold)" stroke="#ffdf86" stroke-width="1.1"
+             stroke-linejoin="round">
+            <path d="M60 8 Q39 34 60 65 Q81 34 60 8Z"/>
+            <path d="M59 65 Q28 17 24 42 Q27 62 59 72Z"/>
+            <path d="M61 65 Q92 17 96 42 Q93 62 61 72Z"/>
+            <path d="M54 72 Q12 49 11 65 Q22 81 56 81Z"/>
+            <path d="M66 72 Q108 49 109 65 Q98 81 64 81Z"/>
+            <path d="M60 69 Q40 46 42 67 Q46 82 60 86 Q74 82 78 67 Q80 46 60 69Z"/>
+            <path d="M27 84 Q60 93 93 84 L84 91 L36 91Z"/>
+          </g>
+          <path d="M20 95 Q60 101 100 95" fill="none"
+                stroke="url(#gold)" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <p class="eyebrow">DISCIPLINE · KNOWLEDGE · COURAGE</p>
+      <h1>SHAURYAM</h1>
+      <p class="devanagari">शौर्यम्</p>
+      <div class="splash-line"></div>
+      <p class="creator">CREATED BY <strong>YOGESH</strong></p>
+      <p class="splash-loading">PREPARING YOUR SPACE...</p>
+    </div>
+  </div>
+
+  <div id="app" class="app-shell hidden">
+    <header class="topbar">
+      <button class="brand-mini" data-go="home" aria-label="Go to home">
+        <svg viewBox="0 0 120 100" class="mini-lotus" aria-hidden="true">
+          <g fill="url(#gold)">
+            <path d="M60 8 Q39 34 60 65 Q81 34 60 8Z"/>
+            <path d="M59 65 Q28 17 24 42 Q27 62 59 72Z"/>
+            <path d="M61 65 Q92 17 96 42 Q93 62 61 72Z"/>
+            <path d="M54 72 Q12 49 11 65 Q22 81 56 81Z"/>
+            <path d="M66 72 Q108 49 109 65 Q98 81 64 81Z"/>
+            <path d="M60 69 Q40 46 42 67 Q46 82 60 86 Q74 82 78 67 Q80 46 60 69Z"/>
+          </g>
+        </svg>
+        <span>SHAURYAM<small>शौर्यम्</small></span>
+      </button>
+      <button class="icon-btn" data-go="settings" aria-label="Settings">
+        <span aria-hidden="true">⚙</span>
+      </button>
+    </header>
+
+    <main id="mainContent" class="main-content">
+
+      <section class="screen active" id="screen-home">
+        <div class="hero-card">
+          <div class="hero-top">
+            <div>
+              <p class="eyebrow">YOUR PERSONAL COMMAND CENTRE</p>
+              <h2 id="greeting">Welcome, Warrior</h2>
+              <p id="todayDate" class="muted"></p>
+            </div>
+            <div class="hero-seal">S</div>
+          </div>
+          <div class="hero-divider"></div>
+          <p class="hero-quote">Small steps. Strong discipline. A greater purpose.</p>
+          <div class="hero-stats">
+            <div><strong id="homeTaskCount">0/0</strong><span>Daily missions</span></div>
+            <div><strong id="homeStudyCount">0%</strong><span>Study progress</span></div>
+            <div><strong id="homeWorkoutCount">0</strong><span>Workouts today</span></div>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <div><p class="eyebrow">STAY CONSISTENT</p><h3>Daily Missions</h3></div>
+          <button class="text-btn" data-go="timetable">Timetable ↗</button>
+        </div>
+        <div id="missionList" class="mission-list"></div>
+
+        <div class="section-heading">
+          <div><p class="eyebrow">YOUR DAILY TOOLS</p><h3>Quick Access</h3></div>
+        </div>
+        <div class="quick-grid">
+          <button class="quick-card" data-go="music"><span class="quick-icon">♫</span><strong>Music</strong><small>Player & playlist</small></button>
+          <button class="quick-card" data-go="exercise"><span class="quick-icon">✦</span><strong>Exercise</strong><small>Workout mode</small></button>
+          <button class="quick-card" data-go="nda"><span class="quick-icon">N</span><strong>NDA</strong><small>NDA-2 2027</small></button>
+          <button class="quick-card" data-go="puc"><span class="quick-icon">11</span><strong>11th PUC</strong><small>PCMC studies</small></button>
+          <button class="quick-card" data-go="timetable"><span class="quick-icon">▦</span><strong>Timetable</strong><small>Daily routine</small></button>
+          <button class="quick-card" data-go="notes"><span class="quick-icon">✎</span><strong>Notes</strong><small>Ideas & revision</small></button>
+          <button class="quick-card" data-go="focus"><span class="quick-icon">◷</span><strong>Focus Timer</strong><small>Study sessions</small></button>
+          <button class="quick-card" data-go="assistant"><span class="quick-icon">✧</span><strong>AI Assistant</strong><small>Ask ChatGPT</small></button>
+        </div>
+
+        <div class="section-heading"><div><p class="eyebrow">KEEP MOVING FORWARD</p><h3>Study Overview</h3></div></div>
+        <div id="homeStudyOverview" class="panel"></div>
+      </section>
+
+      <section class="screen" id="screen-music">
+        <div class="page-heading"><p class="eyebrow">YOUR PERSONAL SOUNDTRACK</p><h2>Music Studio</h2><p class="muted">Play audio files selected from your phone.</p></div>
+        <div class="music-card panel">
+          <div class="disc-stage">
+            <div id="musicDisc" class="music-disc"><div class="disc-center">S</div></div>
+            <div id="equalizer" class="equalizer"><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <p class="eyebrow center">NOW PLAYING</p>
+          <h3 id="songTitle" class="song-title">No song selected</h3>
+          <p id="songMeta" class="muted center">Choose audio files to begin</p>
+          <audio id="audioPlayer" preload="metadata"></audio>
+          <div class="seek-row">
+            <span id="elapsedTime">0:00</span>
+            <input id="seekBar" aria-label="Seek through song" type="range" min="0" max="1000" value="0">
+            <span id="totalTime">0:00</span>
+          </div>
+          <div class="player-controls">
+            <button id="previousSong" class="round-control" aria-label="Previous song">|◀</button>
+            <button id="playPause" class="play-control" aria-label="Play">▶</button>
+            <button id="nextSong" class="round-control" aria-label="Next song">▶|</button>
+          </div>
+          <div class="player-options">
+            <label class="volume-label">Volume <input id="volumeControl" type="range" min="0" max="1" step="0.05" value="0.8"></label>
+            <button id="repeatButton" class="small-chip">Repeat: Off</button>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="section-heading compact"><h3>Your Playlist</h3><span id="playlistCount" class="muted">0 tracks</span></div>
+          <label class="primary-btn file-label">＋ Select audio files
+            <input id="audioFiles" type="file" accept="audio/*,.mp3,.m4a,.aac,.ogg,.wav,.flac,.opus" multiple>
+          </label>
+          <p class="tiny muted">Audio stays on your device. Select files again after reopening the app if needed.</p>
+          <div id="playlist" class="playlist"></div>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-exercise">
+        <div class="page-heading"><p class="eyebrow">BUILD A STRONG FOUNDATION</p><h2>Exercise Mode</h2><p class="muted">Beginner-friendly training. Consistency over intensity.</p></div>
+        <div class="workout-hero panel">
+          <div class="workout-ring"><strong id="workoutClock">00:00</strong><span>SESSION TIME</span></div>
+          <p id="workoutStatus" class="status-text">Ready for today's session</p>
+          <div class="workout-buttons">
+            <button id="startWorkout" class="primary-btn">▶ Start Workout</button>
+            <button id="pauseWorkout" class="secondary-btn" disabled>Ⅱ Pause</button>
+            <button id="endWorkout" class="secondary-btn" disabled>Finish</button>
+          </div>
+          <label class="toggle-row"><span>Play workout music</span><input id="workoutMusic" type="checkbox" checked></label>
+          <label class="field-label">Workout duration
+            <select id="workoutDuration">
+              <option value="10">10 minutes</option><option value="15" selected>15 minutes</option><option value="20">20 minutes</option><option value="30">30 minutes</option>
+            </select>
+          </label>
+          <label class="field-label">Workout song
+            <select id="workoutSong"><option value="-1">Next available song</option></select>
+          </label>
+          <p class="tiny muted">Keep the page open during a workout. Background playback and resume depend on Android and browser settings.</p>
+        </div>
+        <div class="panel">
+          <div class="section-heading compact"><h3>Beginner Workout</h3><span class="muted">Today's checklist</span></div>
+          <div id="exerciseChecklist" class="check-list"></div>
+          <div class="progress-track"><div id="exerciseProgressBar" class="progress-fill"></div></div>
+          <p id="exerciseProgressText" class="tiny muted">0 completed</p>
+        </div>
+        <div class="panel"><h3>Workout History</h3><p class="muted">Completed sessions today: <strong id="workoutHistoryCount">0</strong></p></div>
+      </section>
+
+      <section class="screen" id="screen-timetable">
+        <div class="page-heading"><p class="eyebrow">PLAN WITH PURPOSE</p><h2>Daily Timetable</h2><p class="muted">Suggested timings are editable. Adjust travel and college breaks to your real routine.</p></div>
+        <div class="panel">
+          <div class="section-heading compact"><h3>Your daily routine</h3><button id="addActivity" class="small-chip">＋ Add</button></div>
+          <div id="timetableList" class="timetable-list"></div>
+          <button id="restoreTimetable" class="secondary-btn full-width">Restore default timetable</button>
+        </div>
+        <div id="activityEditor" class="panel hidden">
+          <h3 id="activityEditorTitle">Add activity</h3>
+          <form id="activityForm">
+            <input id="activityId" type="hidden">
+            <label class="field-label">Activity name<input id="activityName" required maxlength="80" placeholder="e.g. NDA Mathematics"></label>
+            <div class="form-grid">
+              <label class="field-label">Start time<input id="activityStart" type="time" required></label>
+              <label class="field-label">End time<input id="activityEnd" type="time" required></label>
+            </div>
+            <label class="field-label">Category
+              <select id="activityCategory"><option>Routine</option><option>Spiritual</option><option>Fitness</option><option>Study</option><option>College</option><option>Personal</option></select>
+            </label>
+            <div class="form-actions"><button type="submit" class="primary-btn">Save activity</button><button type="button" id="cancelActivity" class="secondary-btn">Cancel</button></div>
+          </form>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-nda">
+        <div class="page-heading"><p class="eyebrow">MISSION: NDA-2 2027</p><h2>NDA Preparation</h2><p class="muted">Concepts first. Practice next. Revise consistently.</p></div>
+        <div class="hero-card compact-hero"><p class="eyebrow">YOUR NDA PROGRESS</p><h2 id="ndaProgress">0%</h2><div class="progress-track"><div id="ndaProgressBar" class="progress-fill"></div></div><p class="tiny">Track your own chapter completion.</p></div>
+        <div class="study-subnav">
+          <button class="active" data-nda-tab="Maths">Maths</button><button data-nda-tab="GAT">GAT</button>
+        </div>
+        <div class="panel"><div class="section-heading compact"><h3 id="ndaSubjectTitle">Maths Chapters</h3><button id="addNdaChapter" class="small-chip">＋ Chapter</button></div><div id="ndaChapterList" class="chapter-list"></div></div>
+        <div class="panel">
+          <h3>Revision Notes</h3>
+          <textarea id="ndaNotes" rows="5" placeholder="Formulas, concepts, PYQ mistakes..."></textarea>
+          <button id="saveNdaNotes" class="primary-btn full-width">Save NDA notes</button>
+        </div>
+        <div class="panel">
+          <h3>Study Targets</h3>
+          <label class="field-label">Today's Maths target (minutes)<input id="ndaMathTarget" type="number" min="0" max="300" value="40"></label>
+          <label class="field-label">Today's GAT target (minutes)<input id="ndaGatTarget" type="number" min="0" max="300" value="25"></label>
+          <button id="saveNdaTargets" class="secondary-btn full-width">Save targets</button>
+          <button class="primary-btn full-width" data-go="focus">Start focus session ↗</button>
+        </div>
+        <div class="panel"><h3>My Resources</h3><p class="tiny muted">Add your own trusted study links.</p><form id="ndaResourceForm"><label class="field-label">Resource name<input id="resourceName" required placeholder="e.g. Maths lesson"></label><label class="field-label">URL<input id="resourceUrl" type="url" required placeholder="https://..."></label><button class="primary-btn full-width">Add resource</button></form><div id="ndaResources" class="resource-list"></div></div>
+      </section>
+
+      <section class="screen" id="screen-puc">
+        <div class="page-heading"><p class="eyebrow">11TH PUC · PCMC</p><h2>PUC Study Hub</h2><p class="muted">Track chapters, write revision notes and build strong basics.</p></div>
+        <div id="pucOverview" class="panel"></div>
+        <div class="study-subnav puc-subnav">
+          <button class="active" data-puc-subject="Physics">Physics</button>
+          <button data-puc-subject="Chemistry">Chemistry</button>
+          <button data-puc-subject="Mathematics">Maths</button>
+          <button data-puc-subject="Computer Science">Computer Science</button>
+        </div>
+        <div class="panel"><div class="section-heading compact"><h3 id="pucSubjectTitle">Physics</h3><button id="addPucChapter" class="small-chip">＋ Chapter</button></div><div id="pucChapterList" class="chapter-list"></div></div>
+        <div class="panel"><h3>Subject Revision Notes</h3><textarea id="pucNotes" rows="5" placeholder="Important points, doubts, formulas..."></textarea><button id="savePucNotes" class="primary-btn full-width">Save subject notes</button></div>
+      </section>
+
+      <section class="screen" id="screen-notes">
+        <div class="page-heading"><p class="eyebrow">CAPTURE WHAT MATTERS</p><h2>Notes & Reminders</h2><p class="muted">Study ideas, personal reminders and revision points.</p></div>
+        <div class="panel">
+          <form id="noteForm">
+            <input id="noteId" type="hidden">
+            <label class="field-label">Title<input id="noteTitle" required maxlength="100" placeholder="Note title"></label>
+            <label class="field-label">Category<select id="noteCategory"><option>Study</option><option>Personal</option><option>Reminder</option><option>Fitness</option></select></label>
+            <label class="field-label">Note<textarea id="noteBody" rows="5" required placeholder="Write your note..."></textarea></label>
+            <div class="form-actions"><button class="primary-btn" type="submit">Save note</button><button class="secondary-btn" id="clearNoteForm" type="button">Clear</button></div>
+          </form>
+        </div>
+        <div class="section-heading"><h3>Saved Notes</h3><span id="noteCount" class="muted"></span></div>
+        <div id="notesList" class="notes-list"></div>
+      </section>
+
+      <section class="screen" id="screen-focus">
+        <div class="page-heading"><p class="eyebrow">ONE TASK AT A TIME</p><h2>Focus Timer</h2><p class="muted">A simple timer for study and revision sessions.</p></div>
+        <div class="panel focus-panel">
+          <div class="focus-orb"><div><strong id="focusClock">25:00</strong><span id="focusStatus">READY TO FOCUS</span></div></div>
+          <label class="field-label">Session length
+            <select id="focusDuration"><option value="15">15 minutes</option><option value="25" selected>25 minutes</option><option value="40">40 minutes</option><option value="50">50 minutes</option>
+            </select>
+          </label>
+          <div class="form-actions"><button id="focusStart" class="primary-btn">▶ Start</button><button id="focusPause" class="secondary-btn" disabled>Ⅱ Pause</button><button id="focusReset" class="secondary-btn">↺ Reset</button></div>
+          <p class="tiny muted">Keep this screen open for the most reliable countdown on your phone.</p>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-assistant">
+        <div class="page-heading"><p class="eyebrow">YOUR STUDY COMPANION</p><h2>AI Assistant</h2><p class="muted">Prepare a question and continue in ChatGPT.</p></div>
+        <div class="panel assistant-panel">
+          <div class="assistant-symbol">✧</div>
+          <h3>What do you want to learn?</h3>
+          <p class="muted">Ask about NDA Maths, GAT, 11th PUC, fitness planning or revision.</p>
+          <label class="field-label">Your question<textarea id="aiQuestion" rows="6" placeholder="Explain sets from zero in Hinglish with easy examples and NDA-style MCQs..."></textarea></label>
+          <button id="askChatGPT" class="primary-btn full-width">Continue in ChatGPT ↗</button>
+          <p class="tiny muted">ChatGPT opens separately. You may need to sign in and submit the question there. This app does not automatically receive an AI answer.</p>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-settings">
+        <div class="page-heading"><p class="eyebrow">MAKE IT YOUR OWN</p><h2>Profile & Settings</h2><p class="muted">Your preferences are saved locally on this device.</p></div>
+        <div class="panel profile-panel">
+          <div class="profile-avatar" id="profileAvatar">Y</div>
+          <h3 id="profileDisplayName">Warrior</h3>
+          <p class="tiny muted">LOCAL PROFILE · NO PASSWORD</p>
+          <form id="profileForm"><label class="field-label">Display name<input id="profileNameInput" required maxlength="40"></label><button class="primary-btn full-width">Save profile</button></form>
+        </div>
+        <div class="panel">
+          <h3>Appearance</h3>
+          <label class="field-label">Choose theme
+            <select id="themeSelect">
+              <option value="navy">Navy + Gold</option>
+              <option value="black">Black + Gold</option>
+              <option value="white">White + Gold</option>
+              <option value="forest">Forest + Gold</option>
+              <option value="royal">Royal Purple + Gold</option>
+            </select>
+          </label>
+        </div>
+        <div class="panel">
+          <h3>Music Preferences</h3>
+          <label class="toggle-row"><span>Repeat current song</span><input id="settingsRepeat" type="checkbox"></label>
+          <label class="toggle-row"><span>Workout music enabled by default</span><input id="settingsWorkoutMusic" type="checkbox" checked></label>
+          <p class="tiny muted">Audio files may need to be selected again after reopening this app.</p>
+        </div>
+        <div class="panel">
+          <h3>Progress Overview</h3>
+          <div id="settingsProgress"></div>
+        </div>
+        <div class="panel">
+          <h3>Backup & Data</h3>
+          <p class="tiny muted">Export your timetable, notes, study tracking and settings as JSON. Audio files themselves are not included.</p>
+          <button id="exportBackup" class="primary-btn full-width">Export JSON backup</button>
+          <button id="importBackupButton" class="secondary-btn full-width">Import JSON backup</button>
+          <input id="importBackupFile" type="file" accept=".json,application/json" hidden>
+          <button id="signOut" class="secondary-btn full-width">Sign out</button>
+          <button id="resetData" class="danger-btn full-width">Reset all local data</button>
+          <p class="tiny muted">Sign out returns to the name screen without deleting saved data. Reset permanently clears this app's saved data on this browser.</p>
+        </div>
+        <div class="app-footer">
+          <div class="footer-lotus">✧</div>
+          <strong>SHAURYAM · शौर्यम्</strong>
+          <p>DISCIPLINE · KNOWLEDGE · COURAGE</p>
+          <p>CREATED BY <b>YOGESH</b></p>
+          <span>Made for your daily progress.</span>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <button class="nav-item active" data-go="home"><span>⌂</span><small>Home</small></button>
+      <button class="nav-item" data-go="nda"><span>N</span><small>NDA</small></button>
+      <button class="nav-item" data-go="timetable"><span>▦</span><small>Routine</small></button>
+      <button class="nav-item" data-go="music"><span>♫</span><small>Music</small></button>
+      <button class="nav-item" data-go="settings"><span>⚙</span><small>Settings</small></button>
+    </nav>
+  </div>
+
+  <div id="nameModal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <div class="modal-logo">
+        <svg viewBox="0 0 120 100" aria-hidden="true">
+          <g fill="url(#gold)">
+            <path d="M60 8 Q39 34 60 65 Q81 34 60 8Z"/>
+            <path d="M59 65 Q28 17 24 42 Q27 62 59 72Z"/>
+            <path d="M61 65 Q92 17 96 42 Q93 62 61 72Z"/>
+            <path d="M54 72 Q12 49 11 65 Q22 81 56 81Z"/>
+            <path d="M66 72 Q108 49 109 65 Q98 81 64 81Z"/>
+          </g>
+        </svg>
+      </div>
+      <p class="eyebrow center">WELCOME TO YOUR COMMAND CENTRE</p>
+      <h2 id="nameModalTitle">What should we call you?</h2>
+      <p class="muted center">Choose a display name to personalise SHAURYAM.</p>
+      <form id="nameForm">
+        <label class="field-label">Your name<input id="nameInput" required maxlength="40" placeholder="Enter your name" autocomplete="nickname"></label>
+        <button class="primary-btn full-width">Enter SHAURYAM →</button>
+      </form>
+      <p class="tiny muted center">This is a local profile, not secure account authentication.</p>
+      <p class="creator center">CREATED BY <strong>YOGESH</strong></p>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
